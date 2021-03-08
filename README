@@ -1,3 +1,4 @@
+# First commit
 This is the best project I have ever finished.
 It is a calculator made in tkinter in python 3.8.5. I made it myself and without any tutorials i admit i used stackoverflow but for just one question which was to modify global variables in functions.
 Everybody knows what calculator does. This is a simple version of calculator. Meaning it can only add or substract numbers. It can also only add and substract one-digit numbers.
@@ -5,3 +6,5 @@ There is probbably much better way of making this but i am proud of this project
 I will probbably be improving this as time goes on and as i learn more. But for now this is that calculator.
 Code is explained in comments!
 It works! Yay!
+# Second commit
+I added so that it is no more just one-digit numbers they go up to four-digit(9999 being biggest number you can use).

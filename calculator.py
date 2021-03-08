@@ -14,6 +14,15 @@ second_number = 0 # second number user clicked
 is_plus = 0 # will be true if user clicks plus and false if user clicks minus
 
 # functions
+def error():
+    if len(str(first_number)) >= 5 or len(str(second_number)) >= 5:
+        window.destroy()
+        print("Number can't be greater than 9999.")
+        print("Press enter to stop the program.")
+    else:
+        return
+            
+
 def one():
     result.config(text = "1") # changes result label text to "1"
     # telling function that we want it to use global variables
@@ -22,82 +31,162 @@ def one():
     # if first number already changed we will change second number else
     # we will change first number
     if first_number != 0:
-        second_number = 1
+        if is_plus == 0:
+            first_number = int(str(first_number) + "1")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "1")
+            result.config(text = str(second_number))
+        else:
+            second_number = 1
     else:
         first_number = 1
+    error()
 # we repeat same proccess for every number
 def two():
     result.config(text = "2")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 2
+        if is_plus == 0:
+            first_number = int(str(first_number) + "2")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "2")
+            result.config(text = str(second_number))
+        else:
+            second_number = 2
     else:
         first_number = 2
+    error()
 def three():
     result.config(text = "3")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 3
+        if is_plus == 0:
+            first_number = int(str(first_number) + "3")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "3")
+            result.config(text = str(second_number))
+        else:
+            second_number = 3
     else:
         first_number = 3
+    error()
 def four():
     result.config(text = "4")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 4
+        if is_plus == 0:
+            first_number = int(str(first_number) + "4")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "4")
+            result.config(text = str(second_number))
+        else:
+            second_number = 4
     else:
         first_number = 4
+    error()
 def five():
     result.config(text = "5")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 5
+        if is_plus == 0:
+            first_number = int(str(first_number) + "5")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "5")
+            result.config(text = str(second_number))
+        else:
+            second_number = 5
     else:
         first_number = 5
+    error()
 def six():
     result.config(text = "6")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 6
+        if is_plus == 0:
+            first_number = int(str(first_number) + "6")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "6")
+            result.config(text = str(second_number))
+        else:
+            second_number = 6
     else:
         first_number = 6
+    error()
 def seven():
     result.config(text = "7")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 7
+        if is_plus == 0:
+            first_number = int(str(first_number) + "7")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "7")
+            result.config(text = str(second_number))
+        else:
+            second_number = 7
     else:
         first_number = 7
+    error()
 def eight():
     result.config(text = "8")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 8
+        if is_plus == 0:
+            first_number = int(str(first_number) + "8")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "8")
+            result.config(text = str(second_number))
+        else:
+            second_number = 8
     else:
         first_number = 8
+    error()
 def nine():
     result.config(text = "9")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 9
+        if is_plus == 0:
+            first_number = int(str(first_number) + "9")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "9")
+            result.config(text = str(second_number))
+        else:
+            second_number = 9
     else:
         first_number = 9
+    error()
 def zero():
     result.config(text = "0")
     global first_number
     global second_number
     if first_number != 0:
-        second_number = 0
+        if is_plus == 0:
+            first_number = int(str(first_number) + "0")
+            result.config(text = str(first_number))
+        elif is_plus != 0:
+            second_number = int(str(second_number) + "0")
+            result.config(text = str(second_number))
+        else:
+            second_number = 0
     else:
         first_number = 0
+    error()
 def plus():
     result.config(text = "+")
     global is_plus
@@ -118,6 +207,7 @@ def enter():
     first_number = int(result.cget("text"))
 # reseting everything as it started
 def reset():
+    global enter_clicked
     global first_number
     global second_number
     global is_plus
@@ -125,6 +215,7 @@ def reset():
     second_number = 0
     is_plus = 0
     result.config(text = "0")
+    
 
 # buttons that call functions
 b1 = tk.Button(window, text = "1", font=("Arial", 20), command = one)
